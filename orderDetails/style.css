@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+    border: 1px solid green;
+}
+section{
+    padding: 120px 11% 100px;
+}
+p{
+    color: white;
+}
+/*Header Section*/
+header{
+    padding: 28px 11%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #3D0D16;
+    transition: all ease 0.5s ;
+}
+.logo{
+    width: 150px;;
+    height: 100px;
+    border-radius:50px;
+    cursor: pointer;
+}
+.list{
+    display: flex;
+    align-items:center; 
+}
+.list a{
+    margin: 20px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+.setting-btn img{
+    height: 35px;
+    width: 35px;
+    font-size: 24px;
+    border-radius: 70%;
+    position: relative;
+    top: 1.5px;
+}
+.setting-btn{
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+.setting-btn:hover{
+    color: #0FEB96;
+    transform: translateY(-2px);
+    transition: all ease 0.5s;
+}
+
+.list a:hover{
+    color: #0FEB96;
+    transition: all ease 0.5s;
+}
+
+/*footer Section*/
+
+.footer img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #3D0D16;
+    font-family:'Inter', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.footer p{
+    line-height: 30px;
+    position: relative;
+    bottom: -10px;
+}
+.section-2{
+    display: flex;
+}
+.section-2 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.section-1{
+    position: relative;
+    top: -35px;
+}

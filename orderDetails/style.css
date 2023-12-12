@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
     border: none;
     outline: none;
-    border: 1px solid green;
+    
 }
 section{
     padding: 120px 11% 100px;
@@ -18,7 +18,7 @@ p{
 }
 /*Header Section*/
 header{
-    padding: 28px 11%;
+    padding: 10px 11%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

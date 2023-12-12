@@ -10,6 +10,7 @@
 }
 section{
     padding: 120px 11% 100px;
+    background: #092635;
 }
 p{
     color: white;
@@ -60,6 +61,11 @@ header{
 .list a:hover{
     color: #0FEB96;
     transition: all ease 0.5s;
+}
+
+/*text-field*/
+.first,.second{
+    margin: 50px;
 }
 
 /*footer Section*/

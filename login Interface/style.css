@@ -1,0 +1,50 @@
+*{
+   color: white;
+   font-family: 'Inter', sans-serif;
+}
+
+.login{
+    padding: 100px 300px 200px;
+    background: #092635;
+}
+
+/*font-family: 'Akaya Kanadaka', cursive;*/
+
+h1{
+    font-family: 'Akaya Kanadaka', cursive;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+    
+}
+.line{
+    border-right:2px white solid;
+    height: 400px;
+
+}
+.logo img{
+    width: 130px;
+    height: 80px;
+    border-radius: 35px;
+    position: relative;
+    top: -35px;
+}
+.login-center{
+    display: flex; 
+    justify-content: space-around;
+    background-color: rgba(167, 146, 150, 0.4);
+    border:  rgba(255, 254, 254, 0.4) 6px solid;
+    border-radius: 20px;
+}
+.right h2{
+    display: flex; 
+    justify-content: center; 
+    position: relative; top: 50px; 
+    font-family: 'Dancing Script', cursive;
+    font-weight: 900;
+    font-size: 35px;
+    color: aquamarine;
+}
+.right h4{
+    font-size: 12px;
+}

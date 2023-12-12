@@ -1,0 +1,37 @@
+.txtfield{
+    width: 150px;
+    border:none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+.lbl{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    left: 0px;
+    bottom: 3px;
+    opacity:90%;
+    pointer-events: none;
+    transition: all ease 0.3s;
+
+}
+.txt-container input:focus ~ label,
+.txt-container input:valid ~ label{
+    transform: translateY(-25px);
+}
+.txt-container input:focus{
+    border-bottom: #0FEB96 solid 2px;
+    transition: all ease 0.6s;
+}
+.txt-container{
+    width: fit-content;
+}
+
+/*
+ <div style="position: relative;" class="txt-container">
+            <input class="txtfield" type="text" required>
+        <label class="lbl">Item Code</label>
+*/

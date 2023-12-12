@@ -10,6 +10,7 @@
 }
 section{
     padding: 120px 11% 100px;
+    background: #092635;
 }
 p{
     color: white;
@@ -62,12 +63,56 @@ header{
     transition: all ease 0.5s;
 }
 
+/*center*/
+
+.item-code{
+    left: 290px;
+    top: 10px;
+}
+.item-name{
+    left: 540px;
+    top: -10px;
+}
+.discount{
+    left: 290px;
+    top: 40px;
+}
+.price{
+    left: 540px;
+    top: 18px;
+}
+.qty{
+    left: 421px;
+    top: 60px;
+}
+#lbl-qty{
+    color: #0FEB96;
+}
+
+.btn-add-to-cart{
+    width: fit-content;
+    position: relative;
+    top: 88px;
+    left: 446px;
+
+}
+.btn-AtC{
+    background: #E3651D;
+}
+.btn-pace-order{
+    background: #69af13;
+}
+
+/*table-section*/
+
+
 /*footer Section*/
 
 .footer img{
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    font-family: 'Inter', sans-serif;
 }
 .footer{
     display: flex;

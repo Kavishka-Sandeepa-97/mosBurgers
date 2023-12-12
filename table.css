@@ -1,0 +1,26 @@
+
+th{
+border: 1px solid #dddddd; 
+text-align: center; 
+padding: 8px;
+font-family: 'Inter', sans-serif;
+color:white;
+}
+td{
+    border: 1px solid #dddddd; 
+    text-align: left; 
+    padding: 8px;
+    color:aliceblue;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    background-color: #5c3c3c;
+}
+td img{
+    width: 90px;
+    height: 70px;
+   
+}
+.td-img{
+    display: flex;
+    justify-content: center;
+}

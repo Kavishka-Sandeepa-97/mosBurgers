@@ -11,7 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
-
+    <!--mosTextField-->
+    <link rel="stylesheet" href="../mosTxtField.css">
+    <!--table-css-->
+    <link rel="stylesheet" href="../table.css">
+    <!--btn-css-->
+    <link rel="stylesheet" href="../btn.css">
 
 </head>
 
@@ -26,34 +31,116 @@
             <li><a href="">Order Details</a></li>
             <li><a href="">Reports</a></li>
         </ul>
-        <button class="setting-btn"><img  src="resources/vector-settings-icon.jpg" alt=""></button>
-        
+        <button class="setting-btn"><img src="resources/vector-settings-icon.jpg" alt=""></button>
+
 
     </header>
 
+    <!--center-section-label-->
+    <section class="center">
+        <div style="position: relative;" class="txt-container item-code">
+            <input class="txtfield" type="text" required>
+            <label class="lbl">Item Code</label>
+        </div>
+
+        <div style="position: relative;" class="txt-container item-name">
+            <input class="txtfield" type="text" required>
+            <label class="lbl">Item Name</label>
+        </div>
+
+        <div style="position: relative;" class="txt-container discount">
+            <input class="txtfield" type="text" required>
+            <label class="lbl">Discount</label>
+        </div>
+
+        <div style="position: relative;" class="txt-container price">
+            <input class="txtfield" type="text" required>
+            <label class="lbl">Price</label>
+        </div>
+
+        <div style="position: relative;" class="txt-container qty">
+            <input class="txtfield" type="text" required>
+            <label class="lbl" id="lbl-qty">QTY</label>
+        </div>
+
+        <div class="btn-add-to-cart">
+            <button class="btn btn-AtC">Add to Cart</button>
+        </div>
+
+    </section>
+    <!--table-section-->
+
+    <section style="display: flex; justify-content: center;">
+        <table style="border-collapse: collapse; width:100%;">
+            <tr>
+                <th> Item Code</th>
+                <th>Item Name</th>
+                <th>Item</th>
+                <th style=>Price</th>
+                <th>Discount</th>
+                <th>Byuing QTY</th>
+                <th>Option</th>
+
+            </tr>
+            <tr style="height: 20px;">
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td class="td-img"><img src="resources/download.jpg" alt=""></td>
+                <td>Data 4</td>
+                <td>Data 5</td>
+                <td>Data 6</td>
+                <td>Data 7</td>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td class="td-img"><img src="resources/download (1).jpg" alt=""></td>
+                <td>Data 4</td>
+                <td>Data 5</td>
+                <td>Data 6</td>
+                <td>Data 7</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <div style="position: relative; top:2px;left:290px;" class="txt-container customer-name">
+            <input class="txtfield" type="text" required>
+            <label class="lbl">Customer Name</label>
+        </div>
+
+        <div style="position: relative;top:-20px ;left:540px ;" class="txt-container phone-number">
+            <input class="txtfield" type="text" required>
+        <label class="lbl">Phone Number</label>
+        </div>
+
+        <div class="btn-add-to-cart" style="top: 20px;">
+            <button class="btn btn-pace-order">Place Order</button>
+        </div>
+        
+    </section>
     <!--footer-section-->
 
     <section class="footer">
         <div class="section-1">
-            <img  style="position: relative; top: 90px;left:-47px ;" src="resources/phone (1).jpg" alt="">
+            <img style="position: relative; top: 90px;left:-47px ;" src="resources/phone (1).jpg" alt="">
             <p>
-                
+
                 Reach the Yummy Connection <br>
                 0115586753 <br>
                 0115686754 <br>
             </p>
-            
+
         </div>
         <div class="section-2">
-            
+
             <div>
                 <a href=""><img src="resources/fb.jpg" alt=""></a>
                 <a href=""><img src="resources/ins.jpg" alt=""></a>
-                <a href=""><img src="resources/yt.jpg" alt=""></a>  
+                <a href=""><img src="resources/yt.jpg" alt=""></a>
             </div>
 
             <p>
-                &nbsp; www.facebook.com/mosburgers <br> 
+                &nbsp; www.facebook.com/mosburgers <br>
                 &nbsp;&nbsp;<span style="position: absolute; top: 35px;">www.instafram.com/mosburgers</span><br>
                 &nbsp;&nbsp;<span style="position: absolute; top: 75px;">Mos Burgers </span>
             </p>

@@ -1,0 +1,13 @@
+.btn{
+    width: 100px;
+    height: 35px;
+    border-radius: 15px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.5s ease;
+    color: azure;
+}
+.btn:hover{
+    background: linear-gradient(to right, #2ecc71, #3498db);
+    transform: scale(1.05);
+    
+}

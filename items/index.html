@@ -35,29 +35,29 @@
     <section>
         <div class="first" style="display: flex;justify-content: space-around;">
             <div style="position: relative;" class="txt-container discount">
-                <input class="txtfield" type="text" required>
-                <label class="lbl">item Code</label>
+                <input class="txtfield" type="text" onkeydown="keyPressItemCode(event)" id="txtItemCode" required>
+                <label class="lbl" >item Code</label>
             </div>
             <div style="position: relative;" class="txt-container discount">
-                <input class="txtfield" type="text" required>
-                <label class="lbl"> Item Name</label>
+                <input class="txtfield" type="text" onkeydown="keyPressItemName(event)" id="txtItemName" style="width: 190px;" required>
+                <label class="lbl" > Item Name</label>
             </div>
         </div>
         <div class="second" style="display: flex;justify-content: space-around;">
             <div style="position: relative;" class="txt-container discount">
-                <input class="txtfield" type="text" required>
+                <input class="txtfield" type="text" id="expire" required>
                 <label class="lbl">Expire Date</label>
             </div>
             <div style="position: relative;" class="txt-container discount">
-                <input class="txtfield" type="text" required>
+                <input class="txtfield" type="text" id="price" required>
                 <label class="lbl">price</label>
             </div>
             <div style="position: relative;" class="txt-container discount">
-                <input class="txtfield" type="text" required>
+                <input class="txtfield" type="text" id="discount">
                 <label class="lbl">Discount</label>
             </div>
             <div style="position: relative;" class="txt-container discount">
-                <input class="txtfield" type="text" required>
+                <input class="txtfield" type="text" id="qtyOnHand" required>
                 <label class="lbl">QTY On Hand</label>
             </div>
         </div>

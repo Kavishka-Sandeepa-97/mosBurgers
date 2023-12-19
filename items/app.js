@@ -53,3 +53,51 @@ window.onload = function () {
     tblLoad(); 
 
 }
+function equalsIgnoreCase(str1, str2) {
+    return str1.localeCompare(str2, undefined, { sensitivity: 'base' }) === 0;
+}
+
+function keyPressItemCode(event) {
+   
+    if (event.key === 'Enter') {
+       
+        let inputValue = document.getElementById('txtItemCode').value;
+        for (let i = 0; i < itemsArray.length; i++) {
+            if (equalsIgnoreCase(inputValue, itemsArray[i].itemCode)) {
+
+                document.getElementById("txtName").value=itemsArray[i].itemName;
+                document.getElementById("price").value=itemsArray[i].price;
+                document.getElementById("discount").value=itemsArray[i].discount;
+                document.getElementById("qtyOnHand").value=itemsArray[i].qtyOnHand;
+                return;
+                
+            }
+            
+        }
+        alert("Item Not Found");
+    }
+   
+}
+
+function keyPressItemName(event) {
+
+    if (event.key === 'Enter') {
+       
+        let inputValue = document.getElementById('txtItemName').value;
+        for (let i = 0; i < itemsArray.length; i++) {
+            if (equalsIgnoreCase(inputValue, itemsArray[i].itemName)) {
+
+                document.getElementById("txtItemCode").value=itemsArray[i].itemCode;
+                document.getElementById("price").value=itemsArray[i].price;
+                document.getElementById("discount").value=itemsArray[i].discount;
+                document.getElementById("qtyOnHand").value=itemsArray[i].qtyOnHand;
+                return;
+                
+            }
+            
+        }
+        alert("Item Not Found");
+    }
+   
+
+}

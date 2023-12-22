@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../table.css">
     <!--btn-css-->
     <link rel="stylesheet" href="../btn.css">
-
+    
 </head>
 
 <body>
@@ -33,45 +33,44 @@
         </ul>
         <button class="setting-btn"><img src="resources/vector-settings-icon.jpg" alt=""></button>
 
-
     </header>
 
     <!--center-section-label-->
     <section class="center">
         <div style="position: relative;" class="txt-container item-code">
-            <input class="txtfield" type="text" required>
+            <input class="txtfield" type="text"  onkeydown="keyPressItemCode(event)" id="txtItemCode"  required >
             <label class="lbl">Item Code</label>
         </div>
 
         <div style="position: relative;" class="txt-container item-name">
-            <input class="txtfield" type="text" required>
+            <input class="txtfield" type="text" onkeydown="keyPressItemName(event)" id="txtItemName" style="width: 190px;" required >
             <label class="lbl">Item Name</label>
         </div>
 
         <div style="position: relative;" class="txt-container discount">
-            <input class="txtfield" type="text" required>
+            <input class="txtfield" type="text" id="discount"  required >
             <label class="lbl">Discount</label>
         </div>
 
         <div style="position: relative;" class="txt-container price">
-            <input class="txtfield" type="text" required>
+            <input class="txtfield" type="text" id="price" required >
             <label class="lbl">Price</label>
         </div>
 
         <div style="position: relative;" class="txt-container qty">
-            <input class="txtfield" type="text" required>
+            <input class="txtfield" type="text" id="buyingQty" required >
             <label class="lbl" id="lbl-qty">QTY</label>
         </div>
 
         <div class="btn-add-to-cart">
-            <button class="btn btn-AtC">Add to Cart</button>
+            <button class="btn btn-AtC" onclick="addToCart()">Add to Cart</button>
         </div>
 
     </section>
     <!--table-section-->
 
     <section style="display: flex; justify-content: center;">
-        <table style="border-collapse: collapse; width:100%;">
+        <table style="border-collapse: collapse; width:100%;" id="myTable">
             <tr>
                 <th> Item Code</th>
                 <th>Item Name</th>
@@ -79,27 +78,14 @@
                 <th style=>Price</th>
                 <th>Discount</th>
                 <th>Byuing QTY</th>
+                <th>Amount</th>
                 <th>Option</th>
 
             </tr>
-            <tr style="height: 20px;">
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td class="td-img"><img src="resources/download.jpg" alt=""></td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-            </tr>
-            <tr>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td class="td-img"><img src="resources/download (1).jpg" alt=""></td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-            </tr>
+          
+                
+                
+            
         </table>
     </section>
     <section>
@@ -155,6 +141,7 @@
         </div>
 
     </section>
+    
     <script src="app.js"></script>
 </body>
 

@@ -1,18 +1,8 @@
 
 'use strict'
 
-
-function Item(itemCode, itemName, imgSrc,expireDate, discount, qtyOnHand,price) {
-    this.itemCode = itemCode;
-    this.itemName = itemName;
-    this.imgSrc = imgSrc;
-    this.expireDate=expireDate;
-    this.price=price;
-    this.discount = discount;
-    this.qtyOnHand = qtyOnHand;
-}
-
 let itemsArray = [
+    
     { itemCode: "B1001", itemName: "Classic Burger (Large)", imgSrc: "resources/download.jpg",expireDate: "2023/12/19",price: 750, discount: 0, qtyOnHand:50 },
     { itemCode: "B1002", itemName: "Classic Burger (Regular)", imgSrc: "resources/download.jpg",expireDate: "2023/12/19", price: 1500, discount: 15, qtyOnHand: 64 },
     { itemCode: "B1003", itemName: "Turkey Burger", imgSrc: "resources/download.jpg",expireDate: "2023/12/19", price: 1600, discount: 0, qtyOnHand: 70 },
@@ -52,7 +42,7 @@ function tblLoad() {
                 </tr>`;
        
     }
-    document.getElementById(`table`).innerHTML=content;
+    document.getElementById("table").innerHTML=content;
 }
 window.onload = function () {
     tblLoad(); 
@@ -125,16 +115,12 @@ function update(){
     for (let i = 0; i < itemsArray.length; i++) {
         
         if(equalsIgnoreCase(itemCode, itemsArray[i].itemCode)){
-            content+=` <tr style="height: 20px;">
-                <td>${document.getElementById("txtItemCode").value}</td>
-                <td>${document.getElementById("txtItemName").value}</td>
-                <td class="td-img"><img src="resources/download.jpg" alt=""></td>
-                <td>${document.getElementById("expireDate").value}</td>
-                <td>${document.getElementById("price").value}</td>
-                <td>${document.getElementById("discount").value}</td>
-                <td>${document.getElementById("qtyOnHand").value}</td>
-                </tr>`; 
-                continue;
+
+            itemsArray[i].itemName=document.getElementById("txtItemName").value;
+            itemsArray[i].expireDate=document.getElementById("expireDate").value;
+            itemsArray[i].price=document.getElementById("price").value;
+            itemsArray[i].discount=document.getElementById("discount").value;
+            itemsArray[i].qtyOnHand=document.getElementById("qtyOnHand").value;
         }
        content+=` <tr style="height: 20px;">
                 <td>${itemsArray[i].itemCode}</td>
@@ -151,6 +137,16 @@ function update(){
 }
 
 function addItem(){
+    itemsArray.push({
+        itemCode:document.getElementById("txtItemCode").value,
+        itemName:document.getElementById("txtItemName").value,
+        imgSrc: "resources/download.jpg",
+        expireDate:document.getElementById("expireDate").value,
+        price:document.getElementById("price").value,
+        discount:document.getElementById("discount").value,
+        qtyOnHand:document.getElementById("qtyOnHand").value
+
+    });
     let content=`<tr>
     <th> Item Code</th>
     <th>Item Name</th>
@@ -177,21 +173,20 @@ function addItem(){
                 </tr>`;
        
     }
-    content+=` <tr style="height: 20px;">
-    <td>${document.getElementById("txtItemCode").value}</td>
-    <td>${document.getElementById("txtItemName").value}</td>
-    <td class="td-img"><img src="resources/download.jpg" alt=""></td>
-    <td>${document.getElementById("expireDate").value}</td>
-    <td>${document.getElementById("price").value}</td>
-    <td>${document.getElementById("discount").value}</td>
-    <td>${document.getElementById("qtyOnHand").value}</td>
-    </tr>`; 
+    
     document.getElementById(`table`).innerHTML=content;
     alert("updated");
 }
 
 function deleteItem(){
     let itemCode=document.getElementById("txtItemCode").value
+    for (let i = 0; i < itemsArray.length; i++) {
+        
+        if(equalsIgnoreCase(itemCode, itemsArray[i].itemCode)){
+            itemsArray.splice(i, 1);
+            
+        }
+    }
 
     let content=`<tr>
     <th> Item Code</th>
@@ -205,9 +200,7 @@ function deleteItem(){
 
     for (let i = 0; i < itemsArray.length; i++) {
         
-        if(equalsIgnoreCase(itemCode, itemsArray[i].itemCode)){
-                continue;
-        }
+      
        content+=` <tr style="height: 20px;">
                 <td>${itemsArray[i].itemCode}</td>
                 <td>${itemsArray[i].itemName}</td>
@@ -220,4 +213,12 @@ function deleteItem(){
        
     }
     document.getElementById(`table`).innerHTML=content;
+    alert("Deleted Successfully");
 }
+
+
+
+ 
+
+  
+
